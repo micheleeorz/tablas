@@ -1,0 +1,16 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - echo "Instalando dependencias..."
+      - python --version
+  build:
+    commands:
+      - echo "Ejecutando conversión de TXT a JSON..."
+      - python main.py
+      - echo "Build completado"
+
+artifacts:
+  files:
+    - estados.json
